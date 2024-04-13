@@ -30,6 +30,10 @@ jobs:
         with:
           node-version: 20.11.1
           cache: 'npm'
+      - name: List directory contents
+        run: ls -la ./frontend/Tome
+        working-directory: .
+
 
       - name: Install dependencies
         run: npm ci
