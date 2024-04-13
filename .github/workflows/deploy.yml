@@ -36,7 +36,7 @@ jobs:
 
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --prefix ./frontend/Tome
         working-directory: ./frontend/Tome
 
       - name: Build
