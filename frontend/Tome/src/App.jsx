@@ -11,7 +11,7 @@ import SignupPage from './components/SignupPage';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Tome">
       <div>
         <Navbar />
         <Routes>
