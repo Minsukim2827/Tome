@@ -9,7 +9,8 @@ import DiscoverPage from './components/DiscoverPage';
 import ProfilePage from './components/ProfilePage';
 import LoginPage from './components/LoginPage';
 import SignupPage from './components/SignupPage';
-//import Carousel from './components/Carousel';
+import HomeCarousel from './components/HomeCarousel';
+
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={
             <>
               <HomePage />
+              <HomeCarousel/>
             </>
           } />
           <Route path="/mylists" element={<MyListsPage />} />
