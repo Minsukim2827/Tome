@@ -29,12 +29,6 @@ jobs:
           npm install
           npm run build        
 
-      - name: Cleanup before deploy
-        run: |
-          git worktree prune
-          rm -rf .git/worktrees/*
-          git worktree add -B gh-pages public origin/gh-pages
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
