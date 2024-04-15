@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './components/HomePage';
@@ -8,14 +9,21 @@ import DiscoverPage from './components/DiscoverPage';
 import ProfilePage from './components/ProfilePage';
 import LoginPage from './components/LoginPage';
 import SignupPage from './components/SignupPage';
+//import Carousel from './components/Carousel';
+
 
 function App() {
   return (
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
     <Router basename="/Tome">
       <div>
         <Navbar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={
+            <>
+              <HomePage />
+            </>
+          } />
           <Route path="/mylists" element={<MyListsPage />} />
           <Route path="/discover" element={<DiscoverPage />} />
           <Route path="/profile" element={<ProfilePage />} />
@@ -25,6 +33,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </ThemeProvider>
 
   );
 }

@@ -10,11 +10,11 @@ const HomePage = () => {
         <br></br>
         <span className="bg-gradient-to-r from-blue-500 to-purple-800 text-transparent bg-clip-text">
           {" "}
-          for avid fantasy & scifi readers
+          for book readers
         </span>
       </h1>
       <p className="mt-10 text-lg text-center text-neutral-500 max-w-4xl">
-      Welcome to your go-to destination for fantasy and sci-fi book reviews and tracking! Explore expert insights and community recommendations to find your next captivating read. Whether you're into epic fantasies, dystopian futures, or interstellar adventures, we've got you covered.
+      Welcome to your go-to destination for book collections and discovery! Explore this tome of resources and community recommendations to find your next captivating read. Whether you're into epic fantasies, crime thrillers, or interstellar adventures, we've got you covered.
       </p>
       <div className="flex justify-center my-10">
       <Link
