@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpenText, Menu, X } from 'lucide-react';
-import '@/css/index.css'; // Import Tailwind CSS
+import '@/css/index.css'; // Import TailwindCSS
 
 const navItems = [
   { label: 'Home', href: '/' },
