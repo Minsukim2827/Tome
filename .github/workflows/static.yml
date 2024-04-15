@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -22,7 +27,13 @@ jobs:
         run: |
           cd frontend/Tome/
           npm install
-          npm run build         
+          npm run build        
+
+      - name: Cleanup before deploy
+        run: |
+          git worktree prune
+          rm -rf .git/worktrees/*
+          git worktree add -B gh-pages public origin/gh-pages
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
