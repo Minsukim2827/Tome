@@ -32,6 +32,7 @@ const Carousel = React.forwardRef((
 ) => {
   const [carouselRef, api] = useEmblaCarousel({
     ...opts,
+    loop: true,
     axis: orientation === "horizontal" ? "x" : "y",
   }, plugins)
   const [canScrollPrev, setCanScrollPrev] = React.useState(false)
@@ -87,7 +88,7 @@ const Carousel = React.forwardRef((
   }, [api, onSelect])
 
   return (
-    (<CarouselContext.Provider
+    <CarouselContext.Provider
       value={{
         carouselRef,
         api: api,
@@ -108,7 +109,7 @@ const Carousel = React.forwardRef((
         {...props}>
         {children}
       </div>
-    </CarouselContext.Provider>)
+    </CarouselContext.Provider>
   );
 })
 Carousel.displayName = "Carousel"

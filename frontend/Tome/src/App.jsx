@@ -1,17 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import HomePage from './components/HomePage';
-import MyListsPage from './components/MyListsPage';
-import DiscoverPage from './components/DiscoverPage';
-import ProfilePage from './components/ProfilePage';
-import LoginPage from './components/LoginPage';
-import SignupPage from './components/SignupPage';
-import HomeCarousel from './components/HomeCarousel';
-
-
+import { ThemeProvider } from "@/components/NavBar/theme-provider";
+import Navbar from './components/NavBar/Navbar';
+import Footer from './components/Footer/Footer';
+import HomePage from './components/HomePage/HomePage';
+import MyListsPage from './components/MyListsPage/MyListsPage';
+import DiscoverPage from './components/DiscoverPage/DiscoverPage';
+import ProfilePage from './components/ProfilePage/ProfilePage';
+import LoginPage from './components/LoginPage/LoginPage';
+import SignupPage from './components/SignupPage/SignupPage';
 
 function App() {
   return (
@@ -23,7 +20,7 @@ function App() {
           <Route path="/" element={
             <>
               <HomePage />
-              <HomeCarousel/>
+              
             </>
           } />
           <Route path="/mylists" element={<MyListsPage />} />
